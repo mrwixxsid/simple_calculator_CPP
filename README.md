@@ -1,6 +1,6 @@
-# Advanced Calculator in C++
+# Simple Calculator in C++ with menu
 
-This is an advanced calculator program written in C++, offering a versatile set of mathematical operations for your computational needs. With this calculator, you can perform basic arithmetic, raise numbers to power, find square roots, and calculate trigonometric functions.
+This is a simple calculator written in C++ and offers a versatile set of mathematical operations for your computational needs. With this calculator, you can perform basic arithmetic, raise numbers to power, find square roots, and calculate trigonometric functions.
 
 ## Features
 
