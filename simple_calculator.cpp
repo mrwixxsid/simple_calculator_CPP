@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include <limits> // for numeric_limits
 
 using namespace std;
 
@@ -63,13 +64,35 @@ int main() {
         cout << "Enter your choice: ";
         cin >> choice;
 
+        // Check if the input is valid
+        if (cin.fail()) {
+            cin.clear(); // Clear error flags
+            cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Ignore invalid input
+            cout << "Invalid input. Please enter a number." << endl;
+            continue; // Continue to the next iteration
+        }
+
         if (choice >= 1 && choice <= 9) {
             cout << "Enter first number: ";
             cin >> num1;
 
+            if (cin.fail()) {
+                cin.clear();
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                cout << "Invalid input. Please enter a number." << endl;
+                continue;
+            }
+
             if (choice >= 1 && choice <= 5) {
                 cout << "Enter second number: ";
                 cin >> num2;
+
+                if (cin.fail()) {
+                    cin.clear();
+                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                    cout << "Invalid input. Please enter a number." << endl;
+                    continue;
+                }
             }
 
             switch (choice) {
